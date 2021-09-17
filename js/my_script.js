@@ -89,7 +89,7 @@ var app = new Vue(
                     ],
                 },
             ],
-            
+            indexContact = 0,
         },
     
         methods : {

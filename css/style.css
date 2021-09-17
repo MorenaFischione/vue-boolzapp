@@ -1,3 +1,45 @@
-div.utente img {
+div.my_utente img {
+    width: 30%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.my_notifiche {
+    background-color: aquamarine;
+}
+
+.my_bell {
+    font-size: 1.2rem;
+    background-color: blanchedalmond;
+    padding: 10px;
+    border-radius: 50%;
+    color: aquamarine;
+}
+
+.my_text-notifiche {
+    padding-bottom: 5px;
+}
+
+.my_search {
+    color: lightgrey;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border: 1px solid lightgrey;
+}
+
+.my_search-bar {
+    color: lightgrey;
+    font-size: 1rem;
+    border: 1px solid lightgrey;
+    margin-bottom: 5px;
+    padding: 8px 10px;
+    width: 80%;
+}
+
+.my_img-avatar {
     width: 30%;
 }

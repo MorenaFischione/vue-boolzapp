@@ -17,30 +17,68 @@
     <!-- Importo lo Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
-    <title>Vue-Slider</title>
+    <title>vue-boolzapp</title>
 </head>
 <body> 
-    " class="container">
+    <div class="container" id="app">
         <div class="row">
-            <div class="col-4">
-                <div class="row justify-content-between">
+            <div class="col-4 p-3">
+                <!-- sezione utente-->
+                <div class="row justify-content-between p-2">
                     <div class="col-6">
-                        <div class="utente">
+                        <div class="my_utente">
                             <img src="img/avatar_io.jpg" alt="avatar utente loggato">
                             <span>Nome Utente</span>
                         </div>
+    
                     </div>
                     <div class="col-6 align-self-center">
-                        <div class="icons text-end">
+                        <div class="my_icons text-end">
                             <i class="fas fa-circle-notch"></i>
                             <i class="far fa-comment-alt"></i>
                             <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- sezione notifiche-->
+                <div class="row">
+                    <div class="col-12 my_notifiche p-3 d-flex justify-content-evenly">
+                        <div  class="align-self-center">
+                            <i class="far fa-bell-slash my_bell"></i>
+                        </div>
+                        <div>
+                            <p class="my_text-notifiche">Ricevi notifiche di nuovi messaggi</p>
+                            <a class="my_link-notifiche" href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                </div>
 
+                
+                <!-- sezione cerca-->
+                <div class="row">
+                    <div class="col-12">
+                        <i class="fas fa-search my_search"></i>
+                        <input class="my_search-bar"type="text" placeholder="Cerca o inizia una Chat">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="my_contacts">
+                            <ul>
+                                <li>
+                                    <img class="my_img-avatar" src="img/avatar_1.jpg" alt="avatar di Michele">
+                                    <span>Michele</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-8"></div>
+            <div class="col-8 p-3">
+
+            </div>
         </div>
 
     </div>
