@@ -43,3 +43,7 @@ div.my_utente img {
 .my_img-avatar {
     width: 30%;
 }
+
+.active {
+    background-color: lightgrey;
+}

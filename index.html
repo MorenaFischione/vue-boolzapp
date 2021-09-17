@@ -65,13 +65,9 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <div class="my_contacts">
-                            <ul>
-                                <li>
-                                    <img class="my_img-avatar" src="img/avatar_1.jpg" alt="avatar di Michele">
-                                    <span>Michele</span>
-                                </li>
-                            </ul>
+                        <div class="my_contact" v-for="(element, indexElement) in contacts" :class="{'active' : indexElement == indexContact}" @click="selectAvatar(indexElement)">  
+                            <img class="my_img-avatar"src="img/avatar_1.jpg" alt="avatar di Michele">
+                            <span>{{element.name}}</span>
                         </div>
                     </div>
                 </div>

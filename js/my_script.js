@@ -89,10 +89,28 @@ var app = new Vue(
                     ],
                 },
             ],
-            indexContact = 0,
+            indexContact : 0,
+
+            imagesContact : [
+                {
+                    photo : "https://www.worldmagazine.it/wp-content/uploads/2020/07/155651602-f058cf94-bf2f-4c47-b31c-50c206572507.jpg",
+                    alt : "",
+                },
+
+
+            ],
+            imageIndex : 0,
         },
     
         methods : {
+
+            selectAvatar: function(elementIndex) {
+                this.indexContact = elementIndex;
+            },
+
+            // funzione che aggiunge all'elemento oggetto dell'array una nuova chiave con valore indice di un array di immagini
+
+
             
         },
         
