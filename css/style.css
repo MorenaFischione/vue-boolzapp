@@ -25,10 +25,6 @@ div.my_utente img {
 
 .my_search {
     color: lightgrey;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    margin-top: 5px;
-    border: 1px solid lightgrey;
 }
 
 .my_search-bar {
@@ -50,7 +46,17 @@ div.my_utente img {
 }
 
 .my_contact-active {
-    width: 30%;
+    width: 20%;
+}
+
+.my_contact-act {
+    border-left: 1px solid lightgrey;
+}
+
+.my_contact-act,
+.my_utente,
+.my_toolbar {
+    height: 70px;
 }
 
 .my_contain-msg {
@@ -69,5 +75,14 @@ div.my_utente img {
 
 .my_conversation {
     background-image: url(../img/mine.jpg);
-    height: 100% ;
+    height: calc( 100% - 140px);
 }
+
+.my_bg-grey {
+    background-color: rgb(248, 245, 245);
+}
+
+.my_overflow {
+    overflow-y: scroll;
+}
+
