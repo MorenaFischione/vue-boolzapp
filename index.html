@@ -22,7 +22,7 @@
 <body> 
     <div class="container" id="app">
         <div class="row">
-            <div class="col-4 p-3">
+            <div class="col-5 p-3">
                 <!-- sezione utente-->
                 <div class="row justify-content-between p-2">
                     <div class="col-6">
@@ -66,14 +66,43 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="my_contact" v-for="(element, indexElement) in contacts" :class="{'active' : indexElement == indexContact}" @click="selectAvatar(indexElement)">  
-                            <img class="my_img-avatar"src="img/avatar_1.jpg" alt="avatar di Michele">
-                            <span>{{element.name}}</span>
+                            <img class="my_img-avatar p-2" alt="" :src='"img/" + addImgAvatar(contacts, indexElement)'>
+                            <span>{{element.name}} </span>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-8 p-3">
-
+            <div class="col-7  p-3 ">
+                <div class="row justify-content-between p-2">
+                    <div class="col-6">
+                        <div>
+                            <img class="my_contact-active" src="img/avatar_io.jpg" alt="avatar utente loggato">
+                            <span>Michele</span>
+                        </div>
+                    </div>
+                    <div class="col-6 align-self-center">
+                        <div class="my_icons text-end">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="far fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+                <section class="my_conversation">
+                    <div class="row justify-content-end p-2">
+                        <div class="col-6 my_text-utente">
+                            <p class="my_green my_contain-msg">"Hai portato a spasso il cane"</p>
+                            <p class="my_green my_contain-msg">Ricordati di dargli da mangiare"</p>
+                        </div>
+                    </div>
+                        <div class="col-12 my_text-interlocutore">
+                            <p class="my_white my_contain-msg">Tutto fatto</p>
+                        </div>
+                    </div>
+                </section>
+    
+               
             </div>
         </div>
 

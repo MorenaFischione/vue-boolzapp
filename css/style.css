@@ -41,9 +41,33 @@ div.my_utente img {
 }
 
 .my_img-avatar {
-    width: 30%;
+    width: 25%;
+    border-radius: 50%;
 }
 
 .active {
     background-color: lightgrey;
+}
+
+.my_contact-active {
+    width: 30%;
+}
+
+.my_contain-msg {
+    padding: 15px;
+    width: 280px;
+    border-radius: 15px;
+}
+
+.my_green {
+    background-color: rgb(175, 247, 175, .7);
+}
+
+.my_white {
+    background-color: rgba(255, 255, 255, 0.788);
+}
+
+.my_conversation {
+    background-image: url(../img/mine.jpg);
+    height: 100% ;
 }
