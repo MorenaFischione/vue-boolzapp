@@ -22,6 +22,7 @@
 <body> 
     <div class="container" id="app">
         <div class="row">
+            <!--Area a sinistra-->
             <div class="col-5">
                 <!-- sezione utente-->
                 <div class="row justify-content-between my_utente my_bg-grey p-2">
@@ -68,6 +69,7 @@
                     </div>
                 </div>
 
+                <!-- sezione lista contatti-->
                 <div class="row my_overflow">
                     <div class="col-12 " class="my_contact" v-for="(element, indexElement) in contacts" :class="{'active' : indexElement == indexContact}" @click="selectAvatar(indexElement)">
                         <div>  
@@ -77,8 +79,10 @@
                     </div>
                 </div>
             </div>
+            <!--Area a destra-->
             <div class="col-7">
                 <div class="row justify-content-between p-2 my_contact-act my_bg-grey">
+                    <!-- sezione contatto selezionato-->
                     <div class="col-6 ">
                         <div>
                             <img class="my_contact-active my_img-avatar" src="img/avatar_io.jpg" alt="avatar utente loggato">
@@ -94,17 +98,18 @@
                     </div>
                 </div>
                 
+                <!-- sezione area messaggi-->
                 <div class="row justify-content-end p-2 my_conversation my_overflow">
                     <div class="col-6 my_text-utente">
-                        <p class="my_green my_contain-msg">"Hai portato a spasso il cane"</p>
-                        <p class="my_green my_contain-msg">Ricordati di dargli da mangiare"</p>
+                        <p class=" my_contain-msg" :class="classeGreen">"Hai portato a spasso il cane"</p>
+                        <p class="my_contain-msg" :class="classeGreen">Ricordati di dargli da mangiare"</p>
                     </div>
                     <div class="col-12 my_text-utente">
-                        <p class=" my_white my_contain-msg">fatto</p>
+                        <p class="my_contain-msg" :class="classeWhite">fatto</p>
                     </div>
                 </div>
 
-
+                <!-- sezione area aggiungi messaggio-->
                 <div class="row">
                     <div class="col-12 bg-light">
                         <nav class="navbar navbar-light bg-light my_toolbar">
@@ -118,9 +123,6 @@
                          </nav>
                     </div>
                 </div>
-
-                    
-               
             </div>
             
         </div>

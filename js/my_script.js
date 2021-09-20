@@ -3,6 +3,8 @@ var app = new Vue(
         el: '#app',
     
         data: {
+            classeGreen : "my_green",
+            classeWhite : "my_white",
             contacts: [
                 {
                     name: 'Michele',
