@@ -103,8 +103,8 @@
                     <div class="col-12 my_text-sent d-flex justify-content-end" v-if="element.status === 'sent'" v-for="(element) in element.messages">
                         <p class=" my_contain-msg"   :class="classeGreen">{{element.text}}</p>
                     </div>
-                    <div class="col-12 my_text-sent d-flex justify-content-start"  v-for="(element) in element.messages" v-else-if="element.status == 'received' ">
-                        <p class=" my_contain-msg"   :class="classeWhite">{{element.text}}</p>
+                    <div v-else class="col-12 my_text-sent d-flex justify-content-start" v-else-if="element.status == 'received'" >
+                        <p class=" my_contain-msg"   :class="classeWhite" >{{element.text}}</p>
                     </div>
                 </div>
 
