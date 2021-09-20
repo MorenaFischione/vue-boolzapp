@@ -99,13 +99,12 @@
                 </div>
                 
                 <!-- sezione area messaggi-->
-                <div class="row justify-content-end p-2 my_conversation my_overflow">
-                    <div class="col-6 my_text-utente">
-                        <p class=" my_contain-msg" :class="classeGreen">"Hai portato a spasso il cane"</p>
-                        <p class="my_contain-msg" :class="classeGreen">Ricordati di dargli da mangiare"</p>
+                <div class="row justify-content-end p-2 my_conversation my_overflow" v-for="(element, indexElement) in contacts" v-if="indexElement == indexContact">
+                    <div class="col-12 my_text-sent d-flex justify-content-end" v-if="element.status === 'sent'" v-for="(element) in element.messages">
+                        <p class=" my_contain-msg"   :class="classeGreen">{{element.text}}</p>
                     </div>
-                    <div class="col-12 my_text-utente">
-                        <p class="my_contain-msg" :class="classeWhite">fatto</p>
+                    <div class="col-12 my_text-sent d-flex justify-content-start"  v-for="(element) in element.messages" v-else-if="element.status == 'received' ">
+                        <p class=" my_contain-msg"   :class="classeWhite">{{element.text}}</p>
                     </div>
                 </div>
 

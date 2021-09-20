@@ -92,6 +92,7 @@ var app = new Vue(
                 },
             ],
             indexContact : 0,
+            indexMsg: 0,
         },
     
         methods : {
@@ -107,12 +108,9 @@ var app = new Vue(
                 return newImgAvatar;
             },
 
-            // funzione che mi verifica se contatto attivo 
+            // funzione che se l'elemento è attivo scorre i messaggi e mi ritorna il testo
+            
 
-           
-
-
-          
             
         },
         
