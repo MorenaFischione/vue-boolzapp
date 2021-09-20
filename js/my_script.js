@@ -106,6 +106,13 @@ var app = new Vue(
                 let newImgAvatar = "avatar" + array[index].avatar +".jpg";
                 return newImgAvatar;
             },
+
+            // funzione che mi verifica se contatto attivo 
+
+           
+
+
+          
             
         },
         

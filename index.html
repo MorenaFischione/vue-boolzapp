@@ -84,9 +84,9 @@
                 <div class="row justify-content-between p-2 my_contact-act my_bg-grey">
                     <!-- sezione contatto selezionato-->
                     <div class="col-6 ">
-                        <div>
-                            <img class="my_contact-active my_img-avatar" src="img/avatar_io.jpg" alt="avatar utente loggato">
-                            <span>Michele</span>
+                        <div v-for="(element, indexElement) in contacts" v-if="indexElement == indexContact">
+                            <img class="my_contact-active my_img-avatar" :src='"img/" + addImgAvatar(contacts, indexElement)' alt="">
+                            <span>{{element.name}}</span>
                         </div>
                     </div>
                     <div class="col-6 align-self-center">
