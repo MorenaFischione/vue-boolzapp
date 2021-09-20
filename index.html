@@ -100,11 +100,17 @@
                 
                 <!-- sezione area messaggi-->
                 <div class="row justify-content-end p-2 my_conversation my_overflow" v-for="(element, indexElement) in contacts" v-if="indexElement == indexContact">
-                    <div class="col-12 my_text-sent d-flex justify-content-end" v-if="element.status === 'sent'" v-for="(element) in element.messages">
-                        <p class=" my_contain-msg"   :class="classeGreen">{{element.text}}</p>
+                    <div class="col-12 my_text-sent d-flex justify-content-end" v-if="element.status === 'sent'" v-for="element in element.messages">
+                        <div class="my_contain-msg" :class="classeGreen">
+                            <p>{{element.text}}</p>
+                            <p class="my_date">{{element.date}}</p>
+                        </div>
                     </div>
                     <div v-else class="col-12 my_text-sent d-flex justify-content-start" v-else-if="element.status == 'received'" >
-                        <p class=" my_contain-msg"   :class="classeWhite" >{{element.text}}</p>
+                        <div class=" my_contain-msg"   :class="classeWhite">
+                            <p>{{element.text}}</p>
+                            <p class="my_date">{{element.date}}</p>
+                        </div>
                     </div>
                 </div>
 
