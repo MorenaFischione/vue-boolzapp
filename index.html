@@ -70,7 +70,7 @@
                 </div>
 
                 <!-- sezione lista contatti-->
-                <div class="row my_overflow">
+                <div class="row my_overflow my_height-contatti">
                     <div class="col-12 " class="my_contact" v-for="(element, indexElement) in contacts" :class="{'active' : indexElement == indexContact}" @click="selectAvatar(indexElement)">
                         <div>  
                             <img class="my_img-avatar p-2" alt="" :src='"img/" + addImgAvatar(contacts, indexElement)'>

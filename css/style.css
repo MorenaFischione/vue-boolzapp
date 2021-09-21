@@ -27,6 +27,10 @@ div.my_utente img {
     color: lightgrey;
 }
 
+.my_max-heigth {
+    max-height: 510px;
+}
+
 .my_search-bar {
     color: lightgrey;
     font-size: 1rem;
@@ -76,7 +80,7 @@ div.my_utente img {
 
 .my_conversation {
     background-image: url(../img/mine.jpg);
-    height: calc( 100% - 140px);
+    height: 500px;
 }
 
 .my_bg-grey {
@@ -90,6 +94,10 @@ div.my_utente img {
 .my_date {
     font-size: .7rem;
     padding-bottom: 10px;
+}
+
+.my_height-contatti {
+    height: 370px;
 }
 
 

@@ -122,7 +122,7 @@ var app = new Vue(
                     Mm = data.getMinutes() + ":";
                     Ss = data.getSeconds() + ":";
                     mm = data.getMilliseconds() + ":";
-                    
+
                     if(Mm < 10) Mm="0"+Mm;
                     if(Ss < 10) Ss="0"+Ss;
                     if(Hh <10) Hh="0"+Hh;
@@ -134,12 +134,36 @@ var app = new Vue(
                     };
                     this.contacts[this.indexContact].messages.push(messaggioCorrente);
                     this.newSms = "";
-                    }
+                    setTimeout(this.messaggioOk, 1000);
+                }
             },
+
+            messaggioOk: function() {
+                let data = new Date();
+                    let Hh, Mm, Ss, mm, gg, ms, aaaa;
+                    gg = data.getDate() + "/";
+                    ms = data.getMonth() + 1 + "/";
+                    aaaa = data.getFullYear();
+                    Hh = data.getHours() + ":";
+                    Mm = data.getMinutes() + ":";
+                    Ss = data.getSeconds() + ":";
+                    mm = data.getMilliseconds() + ":";
+
+                    if(Mm < 10) Mm="0"+Mm;
+                    if(Ss < 10) Ss="0"+Ss;
+                    if(Hh <10) Hh="0"+Hh;
+
+                    let messaggioCorrente = {
+                        date: gg+ms+aaaa+ " " + Hh+Mm+Ss, 
+                        text: "ok", 
+                        status:"received",
+                    };
+                    this.contacts[this.indexContact].messages.push(messaggioCorrente);
+            },
+
             
 
-
-            
+         
         },
         
     });
