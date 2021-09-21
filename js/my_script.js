@@ -92,7 +92,8 @@ var app = new Vue(
                 },
             ],
             indexContact : 0,
-            indexMsg: 0,
+            newSms : "",
+                
         },
     
         methods : {
@@ -108,8 +109,35 @@ var app = new Vue(
                 return newImgAvatar;
             },
 
-            // funzione che se l'elemento è attivo scorre i messaggi e mi ritorna il testo
+            // funzione che aggiunge un messaggio alla lista dei messaggi -messages- 
+
+            addNewSms : function(){
+                if(this.newSms.trim().length > 0){
+                    let data = new Date();
+                    let Hh, Mm, Ss, mm, gg, ms, aaaa;
+                    gg = data.getDate() + "/";
+                    ms = data.getMonth() + 1 + "/";
+                    aaaa = data.getFullYear();
+                    Hh = data.getHours() + ":";
+                    Mm = data.getMinutes() + ":";
+                    Ss = data.getSeconds() + ":";
+                    mm = data.getMilliseconds() + ":";
+                    
+                    if(Mm < 10) Mm="0"+Mm;
+                    if(Ss < 10) Ss="0"+Ss;
+                    if(Hh <10) Hh="0"+Hh;
+
+                    let messaggioCorrente = {
+                        date: gg+ms+aaaa+ " " + Hh+Mm+Ss, 
+                        text: this.newSms, 
+                        status:"sent",
+                    };
+                    this.contacts[this.indexContact].messages.push(messaggioCorrente);
+                    this.newSms = "";
+                    }
+            },
             
+
 
             
         },
